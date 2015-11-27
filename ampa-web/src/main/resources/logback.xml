@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user -->
+<!-- -->
+<!-- For professional support please see -->
+<!-- http://www.qos.ch/shop/products/professionalSupport -->
+<!-- -->
+<configuration>
+	<property name="layout_pattern" value="[%level]%date, [%thread]%file:%line, %msg%n" />
+
+	<appender name="alllog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- Tests run on modern PCs show that buffering related property -->
+		<!-- "BufferedIO" has negligible impact and will be ignored. -->
+		<!--See http://logback.qos.ch/manual/appenders.html#RollingFileAppender -->
+		<!--and http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy -->
+		<!--for further documentation -->
+		<Append>true</Append>
+		<Encoding>UTF-8</Encoding>
+		<File>/data/yy/log/music_dream_live_d/dream_live.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live.log.%d{yyyy-MM-dd-HH}</fileNamePattern>
+			 <maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layout_pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	<appender name="errorlog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- Tests run on modern PCs show that buffering related property -->
+		<!-- "BufferedIO" has negligible impact and will be ignored. -->
+		<!--See http://logback.qos.ch/manual/appenders.html#RollingFileAppender -->
+		<!--and http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy -->
+		<!--for further documentation -->
+		<Append>true</Append>
+		<Encoding>UTF-8</Encoding>
+		<File>/data/yy/log/music_dream_live_d/dream_live_error.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live_error.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layout_pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+	</appender>
+	<appender name="warnlog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Append>true</Append>
+		<Encoding>UTF-8</Encoding>
+		<File>/data/yy/log/music_dream_live_d/dream_live_warn.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live_warn.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layout_pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+	</appender>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<Encoding>UTF-8</Encoding>
+		<encoder>
+			<pattern>${layout_pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="alllog" />
+		<appender-ref ref="errorlog" />
+		<appender-ref ref="warnlog" />
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ampa-web:war">
+    <output-path>$PROJECT_DIR$/ampa-web/target</output-path>
+    <root id="archive" name="apma.war">
+      <element id="artifact" artifact-name="ampa-web:war exploded" />
+    </root>
+  </artifact>
+</component>
