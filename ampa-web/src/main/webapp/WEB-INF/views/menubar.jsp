@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<div class="span3">
+<div class="span2">
     <div class="sidebar-nav">
         <div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i
                 class="icon-dashboard"></i>应用监控

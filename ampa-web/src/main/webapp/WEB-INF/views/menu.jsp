@@ -33,7 +33,7 @@
 
     <div class="row-fluid">
         <jsp:include page="menubar.jsp"></jsp:include>
-        <div class="span9">
+        <div class="span10">
             <div class="stats">
             </div>
             <h1 class="page-title">概况</h1>

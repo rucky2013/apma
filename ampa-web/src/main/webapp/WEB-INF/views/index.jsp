@@ -54,7 +54,7 @@
 
     <div class="row-fluid">
         <jsp:include page="menubar.jsp"></jsp:include>
-        <div class="span9">
+        <div class="span10">
             <script type="text/javascript" src="static/lib/jqplot/jquery.jqplot.min.js"></script>
             <script type="text/javascript" charset="utf-8" src="static/javascripts/graphDemo.js"></script>
 
