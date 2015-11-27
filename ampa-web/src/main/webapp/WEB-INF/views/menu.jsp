@@ -34,10 +34,6 @@
     <div class="row-fluid">
         <jsp:include page="menubar.jsp"></jsp:include>
         <div class="span10">
-            <div class="stats">
-            </div>
-            <h1 class="page-title">概况</h1>
-
             <div class="row-fluid">
                 <div class="block span12">
                     <div class="block-heading" data-toggle="collapse" data-target="#tablewidget">监控菜单列表</div>

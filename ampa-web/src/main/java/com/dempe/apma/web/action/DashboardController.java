@@ -1,5 +1,6 @@
 package com.dempe.apma.web.action;
 
+import com.codahale.metrics.annotation.Timed;
 import com.dempe.apma.web.model.Menu;
 import com.dempe.apma.web.service.MenuService;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ public class DashboardController {
     @Resource
     private MenuService menuService;
 
+    @Timed
     @RequestMapping("/index")
     public String index(Model model) {
         List<Menu> menus = menuService.listMenu();
