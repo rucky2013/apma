@@ -9,8 +9,10 @@
 
     <!-- 数据库实例 -->
     <bean id="mongo" class="com.mongodb.MongoClient">
-        <constructor-arg name="host" value="116.31.122.23"/>
-        <constructor-arg name="port" value="10002"/>
+        <!--<constructor-arg name="host" value="116.31.122.23"/>-->
+        <!--<constructor-arg name="port" value="10002"/>-->
+        <constructor-arg name="host" value="127.0.0.1"/>
+        <constructor-arg name="port" value="27017"/>
     </bean>
 
 
@@ -32,7 +34,7 @@
     <!-- 使用零配置管理依赖注入 -->
     <context:annotation-config/>
     <!-- 主动搜索以下目录 -->
-    <context:component-scan base-package="com.dempe.analysis.web"/>
+    <context:component-scan base-package="com.dempe.apma.web"/>
 
 
 </beans>

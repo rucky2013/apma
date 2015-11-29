@@ -19,9 +19,9 @@
 		<!--for further documentation -->
 		<Append>true</Append>
 		<Encoding>UTF-8</Encoding>
-		<File>/data/yy/log/music_dream_live_d/dream_live.log</File>
+		<File>/tmp/yy/log/music_dream_live_d/dream_live.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live.log.%d{yyyy-MM-dd-HH}</fileNamePattern>
+			<fileNamePattern>/tmp/yy/log/music_dream_live_d/dream_live.log.%d{yyyy-MM-dd-HH}</fileNamePattern>
 			 <maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -40,9 +40,9 @@
 		<!--for further documentation -->
 		<Append>true</Append>
 		<Encoding>UTF-8</Encoding>
-		<File>/data/yy/log/music_dream_live_d/dream_live_error.log</File>
+		<File>/tmp/yy/log/music_dream_live_d/dream_live_error.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live_error.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<fileNamePattern>/tmp/yy/log/music_dream_live_d/dream_live_error.log.%d{yyyy-MM-dd}</fileNamePattern>
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -56,9 +56,9 @@
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<Append>true</Append>
 		<Encoding>UTF-8</Encoding>
-		<File>/data/yy/log/music_dream_live_d/dream_live_warn.log</File>
+		<File>/tmp/yy/log/music_dream_live_d/dream_live_warn.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/yy/log/music_dream_live_d/dream_live_warn.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<fileNamePattern>/tmp/yy/log/music_dream_live_d/dream_live_warn.log.%d{yyyy-MM-dd}</fileNamePattern>
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>

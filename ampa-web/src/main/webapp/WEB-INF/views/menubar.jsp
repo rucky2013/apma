@@ -9,7 +9,7 @@
         </div>
         <ul id="dashboard-menu" class="nav nav-list collapse in">
             <c:forEach items="${menus}" var="menu" varStatus="status">
-                <li><a href="index.html">${menu.name}</a></li>
+                <li><a href="/chartDetail">${menu.name}</a></li>
             </c:forEach>
         </ul>
         <div class="nav-header" data-toggle="collapse" data-target="#accounts-menu"><i
